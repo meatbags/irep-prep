@@ -5,6 +5,7 @@ var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var MinifyPlugin = require("babel-minify-webpack-plugin");
 var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+var WebpackShellPlugin = require('webpack-shell-plugin-next');
 
 // prefix
 var appName = 'VVV';
@@ -35,7 +36,14 @@ module.exports = [{
     extensions: ['*', '.js']
   },
   plugins: [
-    new MinifyPlugin({}, {comments: false})
+    new MinifyPlugin({}, {comments: false}),
+    new WebpackShellPlugin({
+      onBuildExit:{
+        scripts: ['%SYSTEMROOT%/System32/WindowsPowerShell/v1.0/powershell.exe -executionpolicy bypass -File dist.ps1'],
+        blocking: false,
+        parallel: true
+      }
+    })
   ],
   stats: {colors: true, warnings: false}
 }, {
