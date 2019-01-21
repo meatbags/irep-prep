@@ -16,10 +16,11 @@ A reference repository outlining the structure of an iRep eDetail.
   - Analysis <analysis.zip>
   - Conclusion <conc.zip>
 
-# Example hyperlink
+# Example hyperlinks
 - Example jump to slide in presentation: `<a href="veeva:goToSlide(intro.zip, myPresentation)">link</a>`
 - Or in js: `window.location = "veeva:goToSlide(intro.zip)";`
 - Note: params are not quoted
+- Go to a PDF `<a href = "/assets/my_pdf.pdf">View</a>`
 
 # Navigation
 ## Default
@@ -32,7 +33,3 @@ A reference repository outlining the structure of an iRep eDetail.
 - Jump to another slide `<a href='example1.html'></a>`
 - Jump from zipfile to another zipfile `<a href='veeva:goToSlide(example1.zip)'></a>`
 - Jump from presentation to presentation `<a href='veeva:goToSlide(my_presentation_v01.zip, my_presentation_v01)'></a>`
-
-# Naming Conventions
-## Images
-- Image-full.jpg Image-thumb.jpg

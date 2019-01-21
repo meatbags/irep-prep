@@ -12,7 +12,7 @@ var appName = 'VVV';
 // paths
 var pathJS = './js/main.js';
 var pathSCSS = './scss/main.js';
-var pathOutput = 'presentation/dist';
+var pathOutput = 'dist';
 
 module.exports = [{
   entry: {'app.min': pathJS},
@@ -24,7 +24,7 @@ module.exports = [{
   },
   module: {
     rules: [{
-      test: /\.(js|jsx)$/,
+      test: /\.(js)$/,
       exclude: /node_modules/,
       use: {
         loader: "babel-loader"
@@ -32,9 +32,11 @@ module.exports = [{
     }]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js']
   },
-  plugins: [new MinifyPlugin({}, {comments: false})],
+  plugins: [
+    new MinifyPlugin({}, {comments: false})
+  ],
   stats: {colors: true, warnings: false}
 }, {
   entry: {'style.webpack': pathSCSS},
