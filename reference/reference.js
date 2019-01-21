@@ -4,6 +4,11 @@
 com.veeva.clm
 {success:true, obj_name:[{"Id":"0001929312"}, {record2}, ...]}
 {success:false, code:####, message:"message_text"}
+// #### - denotes the specific error code (1000 is from the underlying API, 2000 is from the JavaScript library)
+// 2000 - Callback function is missing
+// 2001 - Callback is not a JavaScript function
+// 2002 - <parameter_name> is empty
+// 2100 - Request (%@) failed: %@
 
 // ADDRESSES
 // Returns an array of record IDs of all addresses (Address_vod__c) for a particular account (Account)

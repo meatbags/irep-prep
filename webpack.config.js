@@ -10,7 +10,7 @@ var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 var appName = 'VVV';
 
 // paths
-var pathJS = './src/main.js';
+var pathJS = './js/main.js';
 var pathSCSS = './scss/main.js';
 var pathOutput = 'presentation/dist';
 

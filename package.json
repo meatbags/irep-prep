@@ -1,0 +1,35 @@
+{
+  "name": "irep-prep",
+  "version": "1.0.0",
+  "description": "A reference repository outlining the structure of an iRep eDetail.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "pack": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meatbags/irep-prep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/meatbags/irep-prep/issues"
+  },
+  "homepage": "https://github.com/meatbags/irep-prep#readme"
+}
